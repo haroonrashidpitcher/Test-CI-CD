@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import Hello from '@components/HelloWorld'
+import HelloWorld from '@components/HelloWorld'
 
-test('Hello', () => {
+test('HelloWorld', () => {
   // render the component
-  const wrapper = shallowMount(Hello)
+  const wrapper = shallowMount(HelloWorld)
 
   // should not allow for `username` less than 7 characters, excludes whitespace
   wrapper.setData({ username: ' '.repeat(7) })

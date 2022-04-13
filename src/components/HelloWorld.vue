@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Hello',
+  name: 'HelloWorld',
   data () {
     return {
       username: ''
