@@ -38,7 +38,7 @@ jobs:
         # Define the working directory for all run steps in the workflow
         working-directory: ./src
     runs-on: ubuntu-latest
-     strategy:
+    strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
