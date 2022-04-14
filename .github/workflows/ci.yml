@@ -26,9 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - name: 'Install Dependencies'
+      run: npm ci
+    - name: 'Run unit tests'
+      run: npm test
 # Run the linter to check for code style issues
   lint:
     name: 'Run linter'
@@ -51,5 +52,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - name: 'Install Dependencies'
+    - run: npm ci
+    
     - name: 'Run Linter'
-      run: npm test
+    - run: npm lint
